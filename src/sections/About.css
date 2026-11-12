@@ -1,0 +1,180 @@
+
+.about {
+  background: #090909;
+  overflow: hidden;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.about-visual {
+  position: relative;
+  min-height: 520px;
+}
+
+.about-image-main {
+  width: 85%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.about-image-main img,
+.about-image-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.about-image-main:hover img,
+.about-image-small:hover img {
+  transform: scale(1.06);
+}
+
+.about-image-small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 48%;
+  height: 230px;
+  border: 7px solid #090909;
+  overflow: hidden;
+}
+
+.about-experience {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: var(--primary);
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-experience strong {
+  font-family: var(--heading-font);
+  font-size: 50px;
+  line-height: 1;
+}
+
+.about-experience span {
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.about-content .section-heading {
+  margin-top: 20px;
+}
+
+.about-description {
+  color: #b1b1b1;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-top: 25px;
+}
+
+.about-description.secondary {
+  margin-top: 12px;
+}
+
+.about-benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 12px;
+  margin-top: 30px;
+}
+
+.about-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #dedede;
+  font-size: 12px;
+}
+
+.about-benefit svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 35px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--primary);
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.about-link:hover {
+  color: var(--primary);
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    gap: 45px;
+  }
+
+  .about-visual {
+    min-height: 430px;
+  }
+
+  .about-image-main {
+    height: 370px;
+  }
+
+  .about-image-small {
+    height: 190px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-visual {
+    min-height: 450px;
+  }
+
+  .about-image-main {
+    width: 88%;
+    height: 390px;
+  }
+
+  .about-image-small {
+    height: 190px;
+  }
+
+  .about-benefits {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .about-visual {
+    min-height: 360px;
+  }
+
+  .about-image-main {
+    height: 320px;
+  }
+
+  .about-image-small {
+    height: 145px;
+    width: 48%;
+  }
+}
